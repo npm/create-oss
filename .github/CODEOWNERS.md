@@ -2,4 +2,4 @@
 # the repo. Unless a later match takes precedence,
 # @npm/cli-team will be requested for review when
 # someone opens a pull request.
-*       @npm/cli-team
+* @npm/cli-team

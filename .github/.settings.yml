@@ -1,0 +1,41 @@
+--
+#####
+# https://github.com/probot/settings#usage
+
+repository:
+  default_branch: master
+
+teams:
+  - { name: 'cli-team',     permission: 'admin' }
+  - { name: 'robot-write',  permission: 'admin' }
+  - { name: 'robot',        permission: 'pull'  }
+  - { name: 'employees',    permission: 'pull'  }
+  - { name: 'eng',          permission: 'push'  }
+
+labels:
+  - { color: '80C000', name: 'Bug', description: 'things that need fixing' }
+  - { color: '80C000', name: 'Question', description: 'further information is requested' }
+  - { color: '80C000', name: 'Docs', description: 'this change only modifies documentation' }
+  - { color: '80C000', name: 'Epic', description: 'a larger scope of work that will be tracked in a Project Board' }
+  - { color: '80C000', name: 'Backlog', description: 'a "backlogged" item that will be tracked in a Project Board' }
+  - { color: '80C000', name: 'Agenda', description: 'will be discussed at the Open RFC call' }
+  - { color: '80C000', name: 'Meeting', description: 'meeting agendas' }
+  - { color: '80C000', name: 'Enhancement', description: 'new feature or request' }
+  - { color: '80C000', name: 'Good First Issue', description: 'good issue or PR for newcomers' }
+  - { color: '80C000', name: 'Duplicate', description: 'another pull request or issues already addresses this' }
+  - { color: '80C000', name: 'Wontfix', description: 'this will not be worked on' }
+  - { color: '80C000', name: 'Registry', description: 'specific to registry implementation' }
+  - { color: '80C000', name: 'Website', description: 'specific to website implementation' }
+  - { color: '80C000', name: 'Security', description: 'specific to security implementation' }
+  - { color: '80C000', name: 'Ratified', description: 'this RFC is ready for implementation' }
+  - { color: '80C000', name: 'Help Wanted', description: 'extra attention is needed' }
+  - { color: '80C000', name: 'In Progress', description: 'not ready to merge yet' }
+  - { color: '80C000', name: 'Needs Discussion', description: 'is pending a discussion' }
+  - { color: '80C000', name: 'Needs Tests', description: 'requires tests before merging' }
+  - { color: '80C000', name: 'Needs Documentation', description: 'pull request requires docs before merging' }
+  - { color: '80C000', name: 'semver:major', description: 'backwards-incompatible breaking changes' }
+  - { color: '80C000', name: 'semver:minor ', description: 'new backwards-compatible feature' }
+  - { color: '80C000', name: 'semver:patch', description: 'semver patch level for changes' }
+  - { color: '80C000', name: 'Release 6.x', description: 'work is associated with a specific npm 6 release' }
+  - { color: '80C000', name: 'Release 7.x', description: 'work is associated with a specific npm 7 release' }
+  - { color: '80C000', name: 'Release 8.x', description: 'work is associated with a specific npm 8 release' }
