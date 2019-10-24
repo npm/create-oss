@@ -1,7 +1,3 @@
---
-#####
-# https://github.com/probot/settings#usage
-
 repository:
   default_branch: master
 
@@ -34,7 +30,7 @@ labels:
   - { color: '80C000', name: 'Needs Tests', description: 'requires tests before merging' }
   - { color: '80C000', name: 'Needs Documentation', description: 'pull request requires docs before merging' }
   - { color: '80C000', name: 'semver:major', description: 'backwards-incompatible breaking changes' }
-  - { color: '80C000', name: 'semver:minor ', description: 'new backwards-compatible feature' }
+  - { color: '80C000', name: 'semver:minor', description: 'new backwards-compatible feature' }
   - { color: '80C000', name: 'semver:patch', description: 'semver patch level for changes' }
   - { color: '80C000', name: 'Release 6.x', description: 'work is associated with a specific npm 6 release' }
   - { color: '80C000', name: 'Release 7.x', description: 'work is associated with a specific npm 7 release' }
