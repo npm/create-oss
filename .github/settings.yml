@@ -20,6 +20,7 @@ labels:
   - { color: '417505', name: 'Good First Issue', description: 'good issue or PR for newcomers' }
   - { color: '4A4A4A', name: 'Duplicate', description: 'another pull request or issues already addresses this' }
   - { color: '4A4A4A', name: 'Wontfix', description: 'this will not be worked on' }
+  - { color: '343DFF', name: 'Community', description: 'specific to community &/or imported from npm.community' }
   - { color: '50E3C2', name: 'Registry', description: 'specific to registry implementation' }
   - { color: 'E3AF50', name: 'Website', description: 'specific to website implementation' }
   - { color: 'D0021B', name: 'Security', description: 'specific to security implementation' }
