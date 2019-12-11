@@ -1,6 +1,12 @@
 repository:
   default_branch: master
 
+branches:
+  - name: *
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+
 teams:
   - { name: 'cli-team',     permission: 'admin' }
   - { name: 'robot-write',  permission: 'admin' }
