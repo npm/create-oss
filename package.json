@@ -1,12 +1,16 @@
 {
-  "name": "open-source-project-boilerplate",
+  "name": "create-oss",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "init",
+    "oss",
+    "npm"
+  ],
   "author": "npm Inc. <support@npmjs.com>",
   "license": "ISC"
 }
