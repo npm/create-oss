@@ -1,16 +1,41 @@
 {
-  "name": "create-oss",
+  "name": "@npmcli/create-oss",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "package creator for the npm cli team",
+  "main": "lib/index.js",
+  "bin": {
+    "npmcli-create-oss": "bin/npmcli-create-oss.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags",
+    "snap": "tap",
+    "test": "tap",
+    "npmclilint": "npmcli-lint",
+    "lint": "npm run npmclilint -- \"lib/**/*.*js\" \"test/**/*.*js\"",
+    "lintfix": "npm run lint -- --fix",
+    "posttest": "npm run lint --",
+    "postsnap": "npm run lintfix --"
   },
   "keywords": [
     "init",
     "oss",
     "npm"
   ],
+  "files": [
+    "bin",
+    "files",
+    "lib"
+  ],
   "author": "npm Inc. <support@npmjs.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "read": "^1.0.7"
+  },
+  "devDependencies": {
+    "@npmcli/lint": "^1.0.1",
+    "tap": "^15.0.9"
+  }
 }

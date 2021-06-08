@@ -5,7 +5,6 @@
 !/.github
 !*/.gitignore
 !/bin
-!/files
 !/lib
 !/map.js
 !/tap-snapshots
