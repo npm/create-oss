@@ -1,9 +1,9 @@
-# ignore everything
-*
+# ignore everything in the root
+/*
 
 # keep these
 !/.github
-!*/.gitignore
+!**/.gitignore
 !/package.json
 !/package-lock.json
 !/bin
