@@ -1,6 +1,6 @@
 {
   "name": "@npmcli/create-oss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "package creator for the npm cli team",
   "main": "lib/index.js",
   "bin": {
