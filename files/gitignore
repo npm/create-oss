@@ -4,6 +4,8 @@
 # keep these
 !/.github
 !*/.gitignore
+!/package.json
+!/package-lock.json
 !/bin
 !/lib
 !/map.js
