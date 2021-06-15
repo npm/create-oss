@@ -35,7 +35,7 @@ const main = async (argv) => {
       test: 'tap',
     },
     keywords: ['npm', 'oss'],
-    author: 'npm Inc. <support@npmjs.com>',
+    author: 'GitHub Inc.',
     license: 'ISC',
   }
   const pkg = parseArgs(argv, defaultPkg)
