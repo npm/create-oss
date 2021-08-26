@@ -1,10 +1,16 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - latest
 
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         node-version: [10.0.x, 10.x, 12.0.x, 12.x, 14.0.x, 14.x, 15.x, 16.x]
         platform:
@@ -14,6 +20,8 @@ jobs:
           shell: bash
         - os: windows-latest
           shell: bash
+        - os: windows-latest
+          shell: cmd
         - os: windows-latest
           shell: powershell
 
@@ -27,12 +35,13 @@ jobs:
         uses: actions/checkout@v1.1.0
 
       - name: Use Nodejs ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+          cache: npm
 
       - name: Update npm
-        run: npm i -g npm@latest
+        run: npm i --prefer-online -g npm@latest
 
       - name: Install dependencies
         run: npm ci
