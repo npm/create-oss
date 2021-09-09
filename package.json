@@ -12,11 +12,11 @@
     "prepublishOnly": "git push origin --follow-tags",
     "snap": "tap",
     "test": "tap",
-    "npmclilint": "npmcli-lint",
-    "lint": "npm run npmclilint -- \"lib/**/*.*js\" \"test/**/*.*js\"",
+    "lint": "eslint '**/*.js'",
     "lintfix": "npm run lint -- --fix",
-    "posttest": "npm run lint --",
-    "postsnap": "npm run lintfix --"
+    "posttest": "npm run lint",
+    "postsnap": "npm run lintfix --",
+    "postlint": "npm-template-check"
   },
   "keywords": [
     "init",
@@ -25,17 +25,17 @@
   ],
   "files": [
     "bin",
-    "files",
     "lib"
   ],
-  "author": "npm Inc. <support@npmjs.com>",
+  "author": "GitHub Inc.",
   "license": "ISC",
   "dependencies": {
-    "mkdirp": "^1.0.4",
+    "@npmcli/fs": "^1.0.0",
     "read": "^1.0.7"
   },
+  "templateVersion": "1.0.3",
   "devDependencies": {
-    "@npmcli/lint": "^1.0.1",
-    "tap": "^16.0.1"
+    "@npmcli/template-oss": "^1.0.3",
+    "sinon": "^11.1.2"
   }
 }

@@ -8,7 +8,19 @@ on:
       - latest
 
 jobs:
-  build:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: npm
+      - run: npm i --prefer-online -g npm@latest
+      - run: npm ci
+      - run: npm run lint
+
+  test:
     strategy:
       fail-fast: false
       matrix:
@@ -24,20 +36,16 @@ jobs:
           shell: cmd
         - os: windows-latest
           shell: powershell
-
     runs-on: ${{ matrix.platform.os }}
     defaults:
       run:
         shell: ${{ matrix.platform.shell }}
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v1.1.0
-
-      - name: Use Nodejs ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+<<<<<<< HEAD
 
       - name: Update npm
         run: npm i --prefer-online -g npm@latest
@@ -50,3 +58,10 @@ jobs:
 
       - name: List dependencies
         run: npm ls -a
+=======
+          cache: npm
+      - run: npm i --prefer-online -g npm@latest
+      - run: npm ci
+      - run: npm test --ignore-scripts
+      - run: npm ls -a
+>>>>>>> 84c5e38 (feat: refactor to do far less work)
