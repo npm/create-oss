@@ -15,11 +15,13 @@ t.test('creates a package.json', async (t) => {
   const readOptions = []
   const read = (opts, cb) => {
     readOptions.push(opts)
-    if (opts.prompt.startsWith('name'))
+    if (opts.prompt.startsWith('name')) {
       return cb(null, 'test-pkg')
+    }
 
-    if (opts.prompt.startsWith('description'))
+    if (opts.prompt.startsWith('description')) {
       return cb(null, 'just a test')
+    }
   }
 
   const createPackage = t.mock('../lib/createPackage.js', {
