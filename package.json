@@ -36,6 +36,6 @@
   },
   "devDependencies": {
     "@npmcli/lint": "^1.0.1",
-    "tap": "^15.0.9"
+    "tap": "^16.0.1"
   }
 }
