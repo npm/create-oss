@@ -7,16 +7,14 @@
     "npmcli-create-oss": "bin/npmcli-create-oss.js"
   },
   "scripts": {
-    "preversion": "npm test",
-    "postversion": "npm publish",
-    "prepublishOnly": "git push origin --follow-tags",
     "snap": "tap",
     "test": "tap",
-    "lint": "eslint '**/*.js'",
+    "lint": "eslint \"**/*.js\"",
     "lintfix": "npm run lint -- --fix",
     "posttest": "npm run lint",
     "postsnap": "npm run lintfix --",
-    "postlint": "npm-template-check"
+    "postlint": "template-oss-check",
+    "template-oss-apply": "template-oss-apply --force"
   },
   "keywords": [
     "init",
@@ -24,8 +22,8 @@
     "npm"
   ],
   "files": [
-    "bin",
-    "lib"
+    "bin/",
+    "lib/"
   ],
   "author": "GitHub Inc.",
   "license": "ISC",
@@ -33,9 +31,27 @@
     "@npmcli/fs": "^1.0.0",
     "read": "^1.0.7"
   },
-  "templateVersion": "1.0.3",
   "devDependencies": {
-    "@npmcli/template-oss": "^1.0.3",
-    "sinon": "^11.1.2"
+    "@npmcli/eslint-config": "^4.0.0",
+    "@npmcli/template-oss": "4.8.0",
+    "sinon": "^11.1.2",
+    "tap": "^16.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/create-oss.git"
+  },
+  "engines": {
+    "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "4.8.0"
+  },
+  "tap": {
+    "nyc-arg": [
+      "--exclude",
+      "tap-snapshots/**"
+    ]
   }
 }
