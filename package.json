@@ -28,7 +28,6 @@
   "author": "GitHub Inc.",
   "license": "ISC",
   "dependencies": {
-    "@npmcli/fs": "^1.0.0",
     "read": "^1.0.7"
   },
   "devDependencies": {

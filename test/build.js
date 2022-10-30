@@ -1,5 +1,6 @@
 const { join } = require('path')
-const fs = require('@npmcli/fs')
+const { existsSync } = require('fs')
+const fs = require('fs/promises')
 const t = require('tap')
 
 const build = require('../lib/build.js')
@@ -13,7 +14,7 @@ t.test('can return an object', async (t) => {
   t.match(result, defaults, 'got an object')
 
   const target = join(path, 'package.json')
-  const fileExists = await fs.exists(target)
+  const fileExists = existsSync(target)
   t.not(fileExists, 'file was not written')
 })
 
@@ -26,7 +27,7 @@ t.test('can save the package.json', async (t) => {
   t.match(result, defaults, 'got an object')
 
   const target = join(path, 'package.json')
-  const fileExists = await fs.exists(target)
+  const fileExists = existsSync(target)
   t.ok(fileExists, 'file was written')
 
   const contents = await fs.readFile(target)
