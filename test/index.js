@@ -18,11 +18,11 @@ t.test('can generate a package.json', async (t) => {
     prompt: 'name:',
     default: defaultName,
     edit: true,
-  })).yields(null, defaultName)
+  })).resolves(defaultName)
 
   const descPrompt = read.withArgs(sinon.match({
     prompt: 'description:',
-  })).yields(null, description)
+  })).resolves(description)
 
   const result = await pkg.build(pkg.defaults, { path })
 
