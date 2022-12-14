@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.1](https://github.com/npm/create-oss/compare/v2.0.0...v2.0.1) (2022-12-14)
+
+### Dependencies
+
+* [`009e661`](https://github.com/npm/create-oss/commit/009e6618166a9a8dfecb64353861cc93b047bc71) [#28](https://github.com/npm/create-oss/pull/28) bump read from 1.0.7 to 2.0.0 (#28)
+
 ## [2.0.0](https://github.com/npm/create-oss/compare/v1.1.0...v2.0.0) (2022-12-12)
 
 ### ⚠️ BREAKING CHANGES
