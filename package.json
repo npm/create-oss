@@ -28,7 +28,7 @@
   "author": "GitHub Inc.",
   "license": "ISC",
   "dependencies": {
-    "read": "^1.0.7"
+    "read": "^2.0.0"
   },
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.0",

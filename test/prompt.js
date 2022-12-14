@@ -1,7 +1,7 @@
 const sinon = require('sinon')
 const t = require('tap')
 
-const read = sinon.stub()
+const read = sinon.stub().resolves()
 const prompt = t.mock('../lib/prompt.js', { read })
 
 t.afterEach(() => {
@@ -12,7 +12,7 @@ t.test('can provide custom prompt', async (t) => {
   const response = 'yes'
   const mock = read.withArgs(sinon.match({
     prompt: 'supports custom prompts:',
-  })).yields(null, response)
+  })).resolves(response)
 
   const promptFn = prompt({
     prompt: 'supports custom prompts:',
@@ -28,7 +28,7 @@ t.test('can provide default as a value', async (t) => {
   const mock = read.withArgs(sinon.match({
     prompt: 'value:',
     default: response,
-  })).yields(null, response)
+  })).resolves(response)
 
   const promptFn = prompt({
     default: response,
@@ -45,7 +45,7 @@ t.test('can provide default as a function', async (t) => {
   const mock = read.withArgs(sinon.match({
     prompt: 'value:',
     default: response,
-  })).yields(null, response)
+  })).resolves(response)
 
   const promptFn = prompt({
     default: defaultFn,
