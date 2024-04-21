@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/npm/create-oss/compare/v2.0.1...v2.0.2) (2024-04-21)
+
+### Chores
+
+* [`7e37da5`](https://github.com/npm/create-oss/commit/7e37da54b2b880d481dbd93afc15d5e2281c002e) [#70](https://github.com/npm/create-oss/pull/70) postinstall for dependabot template-oss PR (@lukekarrys)
+* [`20a9917`](https://github.com/npm/create-oss/commit/20a9917a18518fc79e322a9a6323865e06d15dfe) [#70](https://github.com/npm/create-oss/pull/70) bump @npmcli/template-oss from 4.21.3 to 4.21.4 (@dependabot[bot])
+
 ## [2.0.1](https://github.com/npm/create-oss/compare/v2.0.0...v2.0.1) (2022-12-14)
 
 ### Dependencies
