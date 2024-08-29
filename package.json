@@ -32,7 +32,7 @@
     "read": "^2.0.0"
   },
   "devDependencies": {
-    "@npmcli/eslint-config": "^4.0.0",
+    "@npmcli/eslint-config": "^5.0.0",
     "@npmcli/template-oss": "4.23.3",
     "sinon": "^18.0.0",
     "tap": "^16.3.0"
